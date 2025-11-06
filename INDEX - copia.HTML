@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💳 Premium Card PayPal Generator Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-section">
+                <h1 class="title">💎 PREMIUM CARD GENERATOR</h1>
+                <p class="subtitle">Sistema Profesional Generación de Tarjetas PayPal</p>
+            </div>
+            <div class="header-buttons" id="headerButtons">
+                <div class="main-buttons" id="mainButtons">
+                    <button class="btn btn-primary" onclick="mostrarPaises()">🌍 PAÍSES</button>
+                    <button class="btn btn-primary" onclick="generarUSA()">🎰 GENERAR USA</button>
+                    <button class="btn btn-primary" onclick="generarLoteUSA()">📊 GENERAR LOTE</button>
+                    <button class="btn btn-primary" onclick="mostrarAccionesRapidas()">⚡ ACCIONES</button>
+                </div>
+                <button class="btn btn-back" id="backButton" onclick="irAtras()" style="display: none;">⬅️ VOLVER</button>
+            </div>
+        </header>
+
+        <!-- Contenido Principal -->
+        <main class="main-content">
+            <!-- Panel Izquierdo -->
+            <aside class="left-panel">
+                <div class="panel-section">
+                    <h3>🔧 HERRAMIENTAS</h3>
+                </div>
+                
+                <div class="panel-section">
+                    <div class="stats">
+                        <pre id="statsText">ESTADÍSTICAS:
+
+• P: 14
+• B: 84
+• Pl: 84
+• Tipos: 7
+• É: 99.9%</pre>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <button class="btn btn-secondary" onclick="actualizarSistema()">🔄 ACTUALIZAR</button>
+                    <button class="btn btn-secondary" onclick="mostrarConfiguracion()">⚙️ CONFIGURAR</button>
+                    <button class="btn btn-secondary" onclick="mostrarEstadisticas()">📈 ESTADÍSTICAS</button>
+                    <button class="btn btn-secondary" onclick="mostrarSeguridad()">🛡️ SEGURIDAD</button>
+                    <button class="btn btn-secondary" onclick="mostrarHistorial()">📋 HISTORIAL</button>
+                    <button class="btn btn-secondary" onclick="autorizarTarjetas()">🎯 AUTORIZAR</button>
+                    <button class="btn btn-secondary" onclick="renovarTarjetas()">🔄 RENOVAR</button>
+                    <button class="btn btn-secondary" onclick="guardarTarjetasTxt()">💾 GUARDAR TXT</button>
+                    <button class="btn btn-secondary" onclick="exportarResultados()">📤 EXPORTAR</button>
+                </div>
+            </aside>
+
+            <!-- Panel Derecho -->
+            <section class="right-panel">
+                <div class="results-header">
+                    <h2>🎯 RESULTADOS PREMIUM</h2>
+                    <div class="results-actions">
+                        <span id="counterLabel">• Tarjetas: 0</span>
+                        <div class="action-buttons">
+                            <button class="btn btn-action" onclick="copiarSeleccion()">📋 COPIAR</button>
+                            <button class="btn btn-action" onclick="limpiarTodo()">🗑️ LIMPIAR</button>
+                            <button class="btn btn-action" onclick="exportarResultados()">🖨️ EXPORTAR</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-container">
+                    <div class="results-border"></div>
+                    <textarea id="resultsText" class="results-text" readonly>
+╔══════════════════════════════════════════════════╗
+║               🅿️ SISTEMA PAYPAL ACTIVO          ║
+╚══════════════════════════════════════════════════╝
+                    </textarea>
+                </div>
+            </section>
+
+            <!-- Panel de Países (Oculto inicialmente) -->
+            <section class="paises-panel" id="paisesPanel" style="display: none;">
+                <h2>🌎 SELECCIONE UN PAÍS</h2>
+                <div class="paises-grid" id="paisesGrid">
+                    <!-- Los países se generarán dinámicamente -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <span id="statusInfo">✅ SISTEMA ACTIVO | 🚀 GENERADOR PREMIUM</span>
+                <div class="footer-buttons">
+                    <button class="btn btn-footer" onclick="mostrarAyuda()">ℹ️ AYUDA</button>
+                    <button class="btn btn-footer" onclick="mostrarPremium()">🌟 PREMIUM</button>
+                    <button class="btn btn-footer" onclick="activarTurbo()">🚀 TURBO</button>
+                    <button class="btn btn-footer" onclick="mostrarSoporte()">📧 SOPORTE</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal para progreso -->
+    <div id="progressModal" class="modal">
+        <div class="modal-content">
+            <h3>🔍 AUTORIZANDO TARJETAS</h3>
+            <div class="progress-bar">
+                <div id="progressBar" class="progress-bar-fill"></div>
+            </div>
+            <p id="progressStatus">Iniciando autorización...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
